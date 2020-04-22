@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <title>Hangman</title>
   </head>
   <body>
-    <div class="game-container">
-      <h1>Hang Man</h1>
-      <p>Find the hidden word - Enter a letter</p>
-      <svg height="250" width="200" class="figure-container">
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="main">
+      <svg height="250" width="200" class="svgMain">
         <line x1="60" y1="20" x2="140" y2="20" />
         <line x1="140" y1="20" x2="140" y2="50" />
         <line x1="60" y1="20" x2="60" y2="230" />
@@ -22,28 +23,21 @@
         <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
         <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
       </svg>
-      <div class="wrongs-letters-container">
-        <div id="wrong-letters">
-          <p>Wrong</p>
-          <span>e,r,t,y</span>
-        </div>
+      <div class="wrong-letters-Main">
+        <div id="wrong-letters"></div>
       </div>
-      <div class="word" id="word">
-        <div class="letter">h</div>
-        <div class="letter">e</div>
-        <div class="letter">l</div>
-        <div class="letter">l</div>
-        <div class="letter">o</div>
-      </div>
+      <div class="word" id="word"></div>
     </div>
-    <div class="popup-container" id="popup-container">
+    <div class="popup-Main" id="popup-Main">
       <div class="popup">
-        <h2 id="final-message">You have won.</h2>
-        <button id="playbutton">Play Again</button>
+        <h2 id="final-message"></h2>
+        <h3 id="final-message-reveal-word"></h3>
+        <button id="play-button">Play Again</button>
       </div>
     </div>
-    <div class="notification-container show" id="notification-container">
-      <p>You have entered this letter</p>
+    <div class="notification" id="notification">
+      <p>You have already entered this letter</p>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
